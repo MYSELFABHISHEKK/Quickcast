@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Abhishek-Jha-s-workspace-r5mjg3.ap-southeast-2.xata.sh/db/abhishek_quickcast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
