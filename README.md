@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎥 Quickcast - Screen Recording & Video Sharing Platform
 
-## Getting Started
+**Quickcast** is a full-stack screen recording and video sharing web application built with cutting-edge technologies including **Next.js**, **Bunny.net**, **Xata**, and **Tailwind CSS**. It allows users to record their screens, upload and manage videos, generate AI-based transcripts, and securely share videos with powerful privacy and search features.
 
-First, run the development server:
+🌐 **Live App**: [quickcast-liart.vercel.app](https://quickcast-liart.vercel.app/)
+
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication**  
+  Secure user login and registration using [Better Auth](https://betterauth.dev) and Google OAuth.
+
+- 📺 **Screen Recording**  
+  Record your screen directly within the browser—no extensions or installations required.
+
+- 📤 **Video Uploading**  
+  Upload videos seamlessly with support for both **public** and **private** visibility options.
+
+- 🧠 **AI-Generated Transcripts**  
+  Automatically generate searchable and accessible transcripts for uploaded videos.
+
+- 🔒 **Privacy Controls**  
+  Toggle video visibility between **public** and **private** modes.
+
+- 🧰 **Security Integration with Arcjet**  
+  Advanced bot protection, email validation, rate limiting, and form security powered by [Arcjet](https://arcjet.com).
+
+- 📊 **Video Metadata**  
+  View unique video IDs, URLs, and access detailed metadata for easy referencing.
+
+- 🔎 **Search Functionality**  
+  Intuitive search bar to locate your videos quickly and efficiently.
+
+- 🔗 **Sharable Links**  
+  Generate unique links to share videos securely with others.
+
+- 💅 **Responsive Modern UI**  
+  Clean and elegant UI/UX built with [Tailwind CSS](https://tailwindcss.com).
+
+- 🗃️ **Database Integration**  
+  Scalable real-time storage and management powered by [Xata](https://xata.io).
+
+- ✅ **Type-Safe ORM**  
+  Use [Drizzle ORM](https://orm.drizzle.team) for secure and type-safe SQL queries.
+
+- 🌐 **Cross-Device Compatibility**  
+  Fully responsive design ensures a seamless experience across all devices.
+
+---
+
+## 🧰 Tech Stack
+
+| Category              | Technology        |
+|-----------------------|-------------------|
+| **Frontend**          | Next.js, TypeScript, Tailwind CSS |
+| **Backend**           | Next.js API Routes |
+| **Authentication**    | Better Auth, Google OAuth |
+| **Database**          | Xata |
+| **ORM**               | Drizzle ORM |
+| **Video Delivery**    | Bunny.net |
+| **Security**          | Arcjet |
+| **Deployment**        | Vercel |
+
+---
+## 📁 Project Structure
+
+````
+/snapcast
+│
+├── /app # Next.js App Router
+├── /components # Reusable UI components
+├── /lib # Utility functions
+├── /styles # Tailwind and global styles
+├── /drizzle # Drizzle ORM config and schema
+├── /public # Static assets
+├── /types # TypeScript type definitions
+└── .env # Environment variables
+````
+
+## <a name="quick-start">🤸 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Cloning the Repository**
+
+```bash
+git clone https://github.com/MYSELFABHISHEK/Quickcast.git
+cd Quickcast
+```
+
+**Installation**
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+**Set Up Environment Variables**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+# Next.js
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# [Xata] Configuration used by the CLI and the SDK
+# Make sure your framework/tooling loads this file on startup to have it available for the SDK
+XATA_API_KEY=
+DATABASE_URL_POSTGRES=
+
+# Google
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+# BetterAuth
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=http://localhost:3000
+
+# Bunny
+BUNNY_STORAGE_ACCESS_KEY=
+BUNNY_LIBRARY_ID=
+BUNNY_STREAM_ACCESS_KEY=
+
+#ArcJet
+ARCJET_API_KEY=
+XATA_API_KEY=
+```
+
+Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on: [Better-Auth](https://www.better-auth.com), [Google Cloud](https://console.cloud.google.com), [Bunny.net](https://bunny.net), [Xata.io](https://xata.io), [Arcjet](https://arcjet.com/).
+
+**Running the Project**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 🛡️ Security
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Quickcast is integrated with Arcjet to ensure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Bot protection
+- Rate limiting
+- Email validation
+- Attack protection on forms and login routes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📹 Powered By
+- Bunny.net: For fast and secure video delivery.
+- Better Auth: For scalable and flexible authentication.
+- Xata: For real-time database storage and search.
+- Drizzle ORM: For type-safe SQL operations.
+- Arcjet: For developer-first security integration.
